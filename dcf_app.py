@@ -6,14 +6,22 @@ import numpy_financial as npf
 import time
 
 # ==========================================
-# PAGE CONFIGURATION & BRANDING
+# PAGE CONFIGURATION & LOGO
 # ==========================================
-st.set_page_config(page_title="Advanced MC Valuation", layout="wide", page_icon="📊")
+st.set_page_config(page_title="Monte Carlo Pi Estimation", layout="wide", page_icon="🎯")
 
-st.sidebar.image("https://cdn-icons-png.flaticon.com/512/2942/2942269.png", width=60)
-st.sidebar.markdown("### **South Mediterranean University (SMU)**")
-st.sidebar.markdown("**MSc Quantitative Finance**")
-st.sidebar.markdown("---")
+try:
+    st.sidebar.image("logo_MSB-01.jpg", width='stretch')
+except Exception:
+    st.sidebar.caption("(MSB Logo Placeholder)")
+
+st.sidebar.markdown("""
+<div style='text-align: center; color: #4F4F4F; font-size: 1.1em; margin-top: 10px; margin-bottom: 20px;'>
+    <strong>Dr. Khaled Belkadhi</strong><br>
+    <span style='font-size: 0.8em;'>Mediterranean School of Business (MSB)</span><br>
+    <span style='font-size: 0.7em;'>&copy; 2026 All Rights Reserved</span>
+</div>
+""", unsafe_allow_html=True)
 
 st.title("📊 Advanced Monte Carlo DCF Valuation")
 st.write("Watch the intrinsic value distribution build in real-time while monitoring the Delta Convergence algorithm (stabilizing on Mean Price).")
