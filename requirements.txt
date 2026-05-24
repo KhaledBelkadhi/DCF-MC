@@ -2,5 +2,4 @@ streamlit
 pandas
 numpy
 matplotlib
-time
-numpy_financial
+numpy-financial
